@@ -1,0 +1,98 @@
+/* Posts.css */
+
+.posts-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.posts-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-new-btn {
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-new-btn:hover {
+    background-color: #45a049;
+}
+
+.posts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.posts-table th,
+.posts-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.posts-table th {
+    background-color: #f2f2f2;
+}
+
+.posts-table td {
+    text-align: center;
+}
+
+.post-details-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.post-details-btn:hover {
+    background-color: #0b7dda;
+}
+
+.new-post-form {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.new-post-form h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.new-post-form input,
+.new-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.new-post-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.new-post-form button:hover {
+    background-color: #0056b3;
+}

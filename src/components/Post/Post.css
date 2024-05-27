@@ -1,0 +1,89 @@
+/* Post.css */
+
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.post-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.post-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-container li {
+    margin-bottom: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+.edit-form {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.edit-form h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-form button:hover {
+    background-color: #0056b3;
+}

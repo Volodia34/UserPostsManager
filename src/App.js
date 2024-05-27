@@ -1,17 +1,18 @@
-import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Users from "./components/Users";
+// App.js
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Users from './components/Users/Users';
+import Posts from './components/Posts/Posts';
+import Post from './components/Post/Post';
 
 function App() {
-  return (
-        <Router>
-          <div>
-            <Routes>
-              <Route path="/" exact component={Users} />
-            </Routes>
-          </div>
-        </Router>
-  );
+    return (
+        <Routes>
+            <Route path="/" exact element={<Users />} />
+            <Route path="/posts/:userId" element={<Posts />} />
+            <Route path="/post/:postId" element={<Post />} />
+        </Routes>
+    );
 }
 
 export default App;
