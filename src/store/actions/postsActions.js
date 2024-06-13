@@ -6,6 +6,8 @@ export const fetchPosts = (userId) => async (dispatch) => {
 };
 
 export const addPost = (post) => async (dispatch) => {
-    const response = await axios.post('https://jsonplaceholder.typicode.com/posts', post);
-    dispatch({ type: 'ADD_POST', payload: response.data });
+    if (post.title && post.body) {
+        const response = await axios.post('https://jsonplaceholder.typicode.com/posts', post);
+        dispatch({ type: 'ADD_POST', payload: response.data });
+    }
 };

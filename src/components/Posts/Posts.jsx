@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts, addPost } from '../../actions/postsActions';
+import { fetchPosts, addPost } from '../../store/actions/postsActions';
 import { Link, useParams } from 'react-router-dom';
 import './Posts.css';
 
@@ -18,16 +18,18 @@ const Posts = () => {
     const [newPostBody, setNewPostBody] = useState('');
 
     const handleAddPost = () => {
-        const newPost = {
-            userId,
-            title: newPostTitle,
-            body: newPostBody
-        };
-        dispatch(addPost(newPost));
+        if (newPostTitle && newPostBody) {
+            const newPost = {
+                userId,
+                title: newPostTitle,
+                body: newPostBody
+            };
+            dispatch(addPost(newPost));
 
-        setShowNewPostForm(false);
-        setNewPostTitle('');
-        setNewPostBody('');
+            setShowNewPostForm(false);
+            setNewPostTitle('');
+            setNewPostBody('');
+        }
     };
 
     return (

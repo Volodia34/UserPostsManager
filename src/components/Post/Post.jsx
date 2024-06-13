@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPost, fetchComments, updatePost, deletePost } from '../../actions/postActions';
+import { fetchPost, fetchComments, updatePost, deletePost } from '../../store/actions/postActions';
 import { useParams, useNavigate } from 'react-router-dom';
 import './Post.css';
 
@@ -16,9 +16,14 @@ const Post = () => {
         dispatch(fetchComments(postId));
     }, [dispatch, postId]);
 
+    useEffect(() => {
+        setUpdatedPostTitle(post.title);
+        setUpdatedPostBody(post.body);
+    }, [post]);
+
     const [editMode, setEditMode] = useState(false);
-    const [updatedPostTitle, setUpdatedPostTitle] = useState(post.title);
-    const [updatedPostBody, setUpdatedPostBody] = useState(post.body);
+    const [updatedPostTitle, setUpdatedPostTitle] = useState('');
+    const [updatedPostBody, setUpdatedPostBody] = useState('');
 
     const handleEdit = () => {
         setEditMode(true);
@@ -36,7 +41,7 @@ const Post = () => {
 
     const handleDelete = () => {
         dispatch(deletePost(postId));
-        navigate('/');
+        navigate(`/users/${post.userId}/posts`);
     };
 
     return (
